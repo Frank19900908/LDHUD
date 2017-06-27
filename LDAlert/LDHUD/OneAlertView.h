@@ -11,7 +11,7 @@
 // 样式：标题+内容+按钮(1个/2个)
 
 #pragma mark - 按钮的回调
-// 1.确认
+// 1.确定
 typedef void(^OneAlertViewClickSureBtnCallBack)();
 // 2.取消
 typedef void(^OneAlertViewClickCancalBtnCallBack)();

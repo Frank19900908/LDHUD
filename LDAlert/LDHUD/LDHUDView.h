@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #pragma mark - 样式一的按钮回调
-// 1.确认
+// 1.确定
 typedef void(^LDHUDViewOneAlertViewClickSureBtnCallBack)();
 // 2.取消
 typedef void(^LDHUDViewOneAlertViewClickCancalBtnCallBack)();
@@ -18,10 +18,16 @@ typedef void(^LDHUDViewOneAlertViewClickCancalBtnCallBack)();
 typedef void(^LDHUDViewTwoAlertViewHideCallBack)();
 
 #pragma mark - 样式四的按钮回调
-// 1.确认
+// 1.确定
 typedef void(^LDHUDViewFourAlertViewClickSureBtnCallBack)(NSString *input);
 // 2.取消
 typedef void(^LDHUDViewFourAlertViewClickCancalBtnCallBack)();
+
+#pragma mark - 样式五的按钮回调
+// 1.确定
+typedef void(^LDHUDViewFiveAlertViewClickSureBtnCallBack)();
+// 2.取消
+typedef void(^LDHUDViewFiveAlertViewClickCancalBtnCallBack)();
 
 @interface LDHUDView : UIView
 
@@ -42,5 +48,9 @@ typedef void(^LDHUDViewFourAlertViewClickCancalBtnCallBack)();
 #pragma mark - 样式四：标题+文本框+按钮(2个)
 // 初始化
 - (instancetype)initWithFrame:(CGRect)frame title:(NSString *)title placeholderText:(NSString *)placeholder isSecureTextEntry:(BOOL)isSecureTextEntry sureBtnText:(NSString *)sureBtnText cancalBtnText:(NSString *)cancalBtnText sureBtnCb:(LDHUDViewFourAlertViewClickSureBtnCallBack)sureBtnCb cancalBtnCb:(LDHUDViewFourAlertViewClickCancalBtnCallBack)cancalBtnCb;
+
+#pragma mark - 样式五：内容+按钮(2个)
+// 初始化
+- (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text sureBtnText:(NSString *)sureBtnText cancalBtnText:(NSString *)cancalBtnText sureBtnCb:(LDHUDViewFiveAlertViewClickSureBtnCallBack)sureBtnCb cancalBtnCb:(LDHUDViewFiveAlertViewClickCancalBtnCallBack)cancalBtnCb;
 
 @end

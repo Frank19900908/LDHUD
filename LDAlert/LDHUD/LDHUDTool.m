@@ -137,4 +137,33 @@
     [[UIApplication sharedApplication].keyWindow addSubview:hudView];
 }
 
+#pragma mark - 样式五：内容+按钮(2个)
++ (void)showHUDWithText:(NSString *)text sureBtnText:(NSString *)sureBtnText cancalBtnText:(NSString *)cancalBtnText sureBtnCb:(LDHUDToolFiveAlertViewClickSureBtnCallBack)sureBtnCb cancalBtnCb:(LDHUDToolFiveAlertViewClickCancalBtnCallBack)cancalBtnCb
+{
+    // hudView
+    LDHUDView *hudView = [[LDHUDView alloc] initWithFrame:[UIScreen mainScreen].bounds text:text sureBtnText:sureBtnText cancalBtnText:cancalBtnText sureBtnCb:^{
+        LDHUDView *hudView = [[UIApplication sharedApplication].keyWindow viewWithTag:8];
+        [UIView animateWithDuration:0.5 animations:^{
+            hudView.alpha = 0;
+        } completion:^(BOOL finished) {
+            [hudView removeFromSuperview];
+        }];
+        if (sureBtnCb) {
+            sureBtnCb();
+        }
+    } cancalBtnCb:^{
+        LDHUDView *hudView = [[UIApplication sharedApplication].keyWindow viewWithTag:8];
+        [UIView animateWithDuration:0.5 animations:^{
+            hudView.alpha = 0;
+        } completion:^(BOOL finished) {
+            [hudView removeFromSuperview];
+        }];
+        if (cancalBtnCb) {
+            cancalBtnCb();
+        }
+    }];
+    hudView.tag = 8;
+    [[UIApplication sharedApplication].keyWindow addSubview:hudView];
+}
+
 @end

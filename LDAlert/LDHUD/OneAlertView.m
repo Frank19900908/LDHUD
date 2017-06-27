@@ -31,7 +31,7 @@
         // 判断按钮的个数
         BOOL isCancalBtn = btnTextArray.count == 1 ? NO : YES;
         // sureBtn
-        CGFloat sureBtnW = isCancalBtn ? (self.bounds.size.width - 1) / 2.0 : self.bounds.size.width;
+        CGFloat sureBtnW = isCancalBtn ? (self.bounds.size.width - 0.5) / 2.0 : self.bounds.size.width;
         CGFloat sureBtnH = 45;
         CGFloat sureBtnX = 0;
         CGFloat sureBtnY = self.bounds.size.height - sureBtnH;
@@ -58,7 +58,7 @@
             // lineHView
             CGFloat lineHViewX = CGRectGetMaxX(sureBtn.frame);
             CGFloat lineHViewY = sureBtn.frame.origin.y;
-            CGFloat lineHViewW = 1;
+            CGFloat lineHViewW = 0.5;
             CGFloat lineHViewH = sureBtn.bounds.size.height;
             UIView *lineHView = [[UIView alloc] initWithFrame:CGRectMake(lineHViewX, lineHViewY, lineHViewW, lineHViewH)];
             lineHView.backgroundColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1];
@@ -66,7 +66,7 @@
         }
         // lineView
         CGFloat lineViewW = self.bounds.size.width;
-        CGFloat lineViewH = 1;
+        CGFloat lineViewH = 0.5;
         CGFloat lineViewX = sureBtn.frame.origin.x;
         CGFloat lineViewY = sureBtn.frame.origin.y - lineViewH;
         UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(lineViewX, lineViewY, lineViewW, lineViewH)];

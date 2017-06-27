@@ -12,6 +12,7 @@
 #import "TwoAlertView.h"
 #import "ThreeAlertView.h"
 #import "FourAlertView.h"
+#import "FiveAlertView.h"
 
 @implementation LDHUDView
 
@@ -159,14 +160,97 @@
         [UIView animateWithDuration:0.65 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveLinear animations:^{
             fourAlertView.frame = CGRectMake(fourAlertView.frame.origin.x, (self.bounds.size.height - fourAlertView.bounds.size.height) / 2.0, fourAlertView.bounds.size.width, fourAlertView.bounds.size.height);
         } completion:nil];
+        // 监听键盘升起&降落
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    }
+    return self;
+}
+
+#pragma mark - 样式五：内容+按钮(2个)
+// 初始化
+- (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text sureBtnText:(NSString *)sureBtnText cancalBtnText:(NSString *)cancalBtnText sureBtnCb:(LDHUDViewFiveAlertViewClickSureBtnCallBack)sureBtnCb cancalBtnCb:(LDHUDViewFiveAlertViewClickCancalBtnCallBack)cancalBtnCb
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor colorWithRed:130.0/255.0 green:130.0/255.0 blue:130.0/255.0 alpha:0.8];
+        // fiveAlertView
+        CGFloat fiveAlertViewW = 250;
+        CGFloat fiveAlertViewH = 115;
+        CGFloat fiveAlertViewX = (self.bounds.size.width - fiveAlertViewW) / 2.0;
+        CGFloat fiveAlertViewY = -fiveAlertViewH;
+        FiveAlertView *fiveAlertView = [[FiveAlertView alloc] initWithFrame:CGRectMake(fiveAlertViewX, fiveAlertViewY, fiveAlertViewW, fiveAlertViewH) text:text sureBtnText:sureBtnText cancalBtnText:cancalBtnText sureBtnCb:^{
+            FiveAlertView *fiveAlertView = [self viewWithTag:1003];
+            [UIView animateWithDuration:0.5 animations:^{
+                fiveAlertView.frame = CGRectMake(fiveAlertView.frame.origin.x, self.bounds.size.height, fiveAlertView.bounds.size.width, fiveAlertView.bounds.size.height);
+            } completion:^(BOOL finished) {
+                [fiveAlertView removeFromSuperview];
+            }];
+            if (sureBtnCb) {
+                sureBtnCb();
+            }
+        } cancalBtnCb:^{
+            FiveAlertView *fiveAlertView = [self viewWithTag:1003];
+            [UIView animateWithDuration:0.5 animations:^{
+                fiveAlertView.frame = CGRectMake(fiveAlertView.frame.origin.x, self.bounds.size.height, fiveAlertView.bounds.size.width, fiveAlertView.bounds.size.height);
+            } completion:^(BOOL finished) {
+                [fiveAlertView removeFromSuperview];
+            }];
+            if (cancalBtnCb) {
+                cancalBtnCb();
+            }
+        }];
+        fiveAlertView.tag = 1003;
+        [self addSubview:fiveAlertView];
+        [UIView animateWithDuration:0.65 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveLinear animations:^{
+            fiveAlertView.frame = CGRectMake(fiveAlertView.frame.origin.x, (self.bounds.size.height - fiveAlertView.bounds.size.height) / 2.0, fiveAlertView.bounds.size.width, fiveAlertView.bounds.size.height);
+        } completion:nil];
     }
     return self;
 }
 
 #pragma mark - 点击空白
+// 用于触发键盘降落
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self endEditing:YES];
+}
+
+#pragma mark 监听键盘的显示与隐藏
+// 1.键盘升起
+- (void) keyboardWillShow:(NSNotification *)notification
+{
+    FourAlertView *fourAlertView = [self viewWithTag:1002];
+    // 获取键盘高度，在不同设备上，以及中英文下是不同的
+    CGFloat kbHeight = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+    // 计算出键盘顶端到inputTextView panel底端的距离(加上自定义的缓冲距离INTERVAL_KEYBOARD)
+    CGFloat offset = (fourAlertView.frame.origin.y + fourAlertView.bounds.size.height) - ([UIScreen mainScreen].bounds.size.height - kbHeight) + 20;
+    // 取得键盘的动画时间，这样可以在视图上移的时候更连贯
+    double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    // 将视图上移计算好的偏移
+    if(offset > 0) {
+        [UIView animateWithDuration:duration animations:^{
+            fourAlertView.frame = CGRectMake(fourAlertView.frame.origin.x, fourAlertView.frame.origin.y - offset, fourAlertView.bounds.size.width, fourAlertView.frame.size.height);
+        }];
+    }
+}
+// 2.键盘降落
+- (void) keyboardWillHide:(NSNotification *)notify
+{
+    FourAlertView *fourAlertView = [self viewWithTag:1002];
+    // 键盘动画时间
+    double duration = [[notify.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    // 视图下沉恢复原状
+    [UIView animateWithDuration:duration animations:^{
+        fourAlertView.frame = CGRectMake(fourAlertView.frame.origin.x, (self.bounds.size.height - fourAlertView.bounds.size.height) / 2.0, fourAlertView.bounds.size.width, fourAlertView.bounds.size.height);
+    }];
+}
+
+#pragma mark - 移除通知
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
 @end

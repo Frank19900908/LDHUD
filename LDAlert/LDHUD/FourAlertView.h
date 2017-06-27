@@ -11,7 +11,7 @@
 // 样式：标题+文本框+按钮(2个)
 
 #pragma mark - 按钮的回调
-// 1.确认
+// 1.确定
 typedef void(^FourAlertViewClickSureBtnCallBack)(NSString *input);
 // 2.取消
 typedef void(^FourAlertViewClickCancalBtnCallBack)();
