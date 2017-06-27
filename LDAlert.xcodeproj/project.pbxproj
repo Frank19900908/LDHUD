@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C82325441F01E3D300F930DE /* FiveAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C82325351F01E3D300F930DE /* FiveAlertView.m */; };
+		C82325451F01E3D300F930DE /* FourAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C82325371F01E3D300F930DE /* FourAlertView.m */; };
+		C82325461F01E3D300F930DE /* LDHUDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C82325391F01E3D300F930DE /* LDHUDTool.m */; };
+		C82325471F01E3D300F930DE /* LDHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = C823253B1F01E3D300F930DE /* LDHUDView.m */; };
+		C82325481F01E3D300F930DE /* LDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C823253D1F01E3D300F930DE /* LDTool.m */; };
+		C82325491F01E3D300F930DE /* OneAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C823253F1F01E3D300F930DE /* OneAlertView.m */; };
+		C823254A1F01E3D300F930DE /* ThreeAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C82325411F01E3D300F930DE /* ThreeAlertView.m */; };
+		C823254B1F01E3D300F930DE /* TwoAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C82325431F01E3D300F930DE /* TwoAlertView.m */; };
+		C823254E1F01E40600F930DE /* EightController.m in Sources */ = {isa = PBXBuildFile; fileRef = C823254D1F01E40600F930DE /* EightController.m */; };
 		C872DC8E1EF9FD2F005BD985 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = C872DC881EF9FD2F005BD985 /* error.png */; };
 		C872DC8F1EF9FD2F005BD985 /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C872DC891EF9FD2F005BD985 /* error@2x.png */; };
 		C872DC901EF9FD2F005BD985 /* error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C872DC8A1EF9FD2F005BD985 /* error@3x.png */; };
 		C872DC911EF9FD2F005BD985 /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = C872DC8B1EF9FD2F005BD985 /* success.png */; };
 		C872DC921EF9FD2F005BD985 /* success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C872DC8C1EF9FD2F005BD985 /* success@2x.png */; };
 		C872DC931EF9FD2F005BD985 /* success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C872DC8D1EF9FD2F005BD985 /* success@3x.png */; };
-		C872DC961EFA00A1005BD985 /* LDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C872DC951EFA00A1005BD985 /* LDTool.m */; };
-		C872DC991EFA0816005BD985 /* ThreeAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C872DC981EFA0816005BD985 /* ThreeAlertView.m */; };
-		C872DCAB1EFA1E26005BD985 /* FourAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C872DCAA1EFA1E26005BD985 /* FourAlertView.m */; };
 		C872DCC31EFA4BBE005BD985 /* FiveController.m in Sources */ = {isa = PBXBuildFile; fileRef = C872DCB41EFA4BBE005BD985 /* FiveController.m */; };
 		C872DCC41EFA4BBE005BD985 /* FourController.m in Sources */ = {isa = PBXBuildFile; fileRef = C872DCB61EFA4BBE005BD985 /* FourController.m */; };
 		C872DCC51EFA4BBE005BD985 /* OneController.m in Sources */ = {isa = PBXBuildFile; fileRef = C872DCB81EFA4BBE005BD985 /* OneController.m */; };
@@ -31,10 +37,6 @@
 		C8DD983F1EF8BFDF0023ABC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8DD983D1EF8BFDF0023ABC0 /* LaunchScreen.storyboard */; };
 		C8DD984A1EF8BFDF0023ABC0 /* LDAlertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DD98491EF8BFDF0023ABC0 /* LDAlertTests.m */; };
 		C8DD98551EF8BFDF0023ABC0 /* LDAlertUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DD98541EF8BFDF0023ABC0 /* LDAlertUITests.m */; };
-		C8DD98651EF8C1820023ABC0 /* OneAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DD98641EF8C1820023ABC0 /* OneAlertView.m */; };
-		C8DD98681EF8D24C0023ABC0 /* LDHUDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DD98671EF8D24C0023ABC0 /* LDHUDTool.m */; };
-		C8DD986B1EF8D2860023ABC0 /* LDHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DD986A1EF8D2860023ABC0 /* LDHUDView.m */; };
-		C8DD986E1EF902F60023ABC0 /* TwoAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DD986D1EF902F60023ABC0 /* TwoAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,18 +57,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C82325341F01E3D300F930DE /* FiveAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveAlertView.h; sourceTree = "<group>"; };
+		C82325351F01E3D300F930DE /* FiveAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveAlertView.m; sourceTree = "<group>"; };
+		C82325361F01E3D300F930DE /* FourAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourAlertView.h; sourceTree = "<group>"; };
+		C82325371F01E3D300F930DE /* FourAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourAlertView.m; sourceTree = "<group>"; };
+		C82325381F01E3D300F930DE /* LDHUDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDHUDTool.h; sourceTree = "<group>"; };
+		C82325391F01E3D300F930DE /* LDHUDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDHUDTool.m; sourceTree = "<group>"; };
+		C823253A1F01E3D300F930DE /* LDHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDHUDView.h; sourceTree = "<group>"; };
+		C823253B1F01E3D300F930DE /* LDHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDHUDView.m; sourceTree = "<group>"; };
+		C823253C1F01E3D300F930DE /* LDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDTool.h; sourceTree = "<group>"; };
+		C823253D1F01E3D300F930DE /* LDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDTool.m; sourceTree = "<group>"; };
+		C823253E1F01E3D300F930DE /* OneAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneAlertView.h; sourceTree = "<group>"; };
+		C823253F1F01E3D300F930DE /* OneAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneAlertView.m; sourceTree = "<group>"; };
+		C82325401F01E3D300F930DE /* ThreeAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeAlertView.h; sourceTree = "<group>"; };
+		C82325411F01E3D300F930DE /* ThreeAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeAlertView.m; sourceTree = "<group>"; };
+		C82325421F01E3D300F930DE /* TwoAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoAlertView.h; sourceTree = "<group>"; };
+		C82325431F01E3D300F930DE /* TwoAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoAlertView.m; sourceTree = "<group>"; };
+		C823254C1F01E40600F930DE /* EightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EightController.h; sourceTree = "<group>"; };
+		C823254D1F01E40600F930DE /* EightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EightController.m; sourceTree = "<group>"; };
 		C872DC881EF9FD2F005BD985 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 		C872DC891EF9FD2F005BD985 /* error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error@2x.png"; sourceTree = "<group>"; };
 		C872DC8A1EF9FD2F005BD985 /* error@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error@3x.png"; sourceTree = "<group>"; };
 		C872DC8B1EF9FD2F005BD985 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
 		C872DC8C1EF9FD2F005BD985 /* success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success@2x.png"; sourceTree = "<group>"; };
 		C872DC8D1EF9FD2F005BD985 /* success@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success@3x.png"; sourceTree = "<group>"; };
-		C872DC941EFA00A1005BD985 /* LDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDTool.h; sourceTree = "<group>"; };
-		C872DC951EFA00A1005BD985 /* LDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDTool.m; sourceTree = "<group>"; };
-		C872DC971EFA0816005BD985 /* ThreeAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeAlertView.h; sourceTree = "<group>"; };
-		C872DC981EFA0816005BD985 /* ThreeAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeAlertView.m; sourceTree = "<group>"; };
-		C872DCA91EFA1E26005BD985 /* FourAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourAlertView.h; sourceTree = "<group>"; };
-		C872DCAA1EFA1E26005BD985 /* FourAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourAlertView.m; sourceTree = "<group>"; };
 		C872DCB31EFA4BBE005BD985 /* FiveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveController.h; sourceTree = "<group>"; };
 		C872DCB41EFA4BBE005BD985 /* FiveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveController.m; sourceTree = "<group>"; };
 		C872DCB51EFA4BBE005BD985 /* FourController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourController.h; sourceTree = "<group>"; };
@@ -97,14 +111,6 @@
 		C8DD98501EF8BFDF0023ABC0 /* LDAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LDAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DD98541EF8BFDF0023ABC0 /* LDAlertUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDAlertUITests.m; sourceTree = "<group>"; };
 		C8DD98561EF8BFDF0023ABC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8DD98631EF8C1820023ABC0 /* OneAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneAlertView.h; sourceTree = "<group>"; };
-		C8DD98641EF8C1820023ABC0 /* OneAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneAlertView.m; sourceTree = "<group>"; };
-		C8DD98661EF8D24C0023ABC0 /* LDHUDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDHUDTool.h; sourceTree = "<group>"; };
-		C8DD98671EF8D24C0023ABC0 /* LDHUDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDHUDTool.m; sourceTree = "<group>"; };
-		C8DD98691EF8D2860023ABC0 /* LDHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDHUDView.h; sourceTree = "<group>"; };
-		C8DD986A1EF8D2860023ABC0 /* LDHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDHUDView.m; sourceTree = "<group>"; };
-		C8DD986C1EF902F60023ABC0 /* TwoAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoAlertView.h; sourceTree = "<group>"; };
-		C8DD986D1EF902F60023ABC0 /* TwoAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,8 @@
 				C872DCBC1EFA4BBE005BD985 /* SixController.m */,
 				C872DCB91EFA4BBE005BD985 /* SevenController.h */,
 				C872DCBA1EFA4BBE005BD985 /* SevenController.m */,
+				C823254C1F01E40600F930DE /* EightController.h */,
+				C823254D1F01E40600F930DE /* EightController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -220,21 +228,23 @@
 		C8DD98621EF8C06C0023ABC0 /* LDHUD */ = {
 			isa = PBXGroup;
 			children = (
+				C823253E1F01E3D300F930DE /* OneAlertView.h */,
+				C823253F1F01E3D300F930DE /* OneAlertView.m */,
+				C82325421F01E3D300F930DE /* TwoAlertView.h */,
+				C82325431F01E3D300F930DE /* TwoAlertView.m */,
+				C82325401F01E3D300F930DE /* ThreeAlertView.h */,
+				C82325411F01E3D300F930DE /* ThreeAlertView.m */,
+				C82325361F01E3D300F930DE /* FourAlertView.h */,
+				C82325371F01E3D300F930DE /* FourAlertView.m */,
+				C82325341F01E3D300F930DE /* FiveAlertView.h */,
+				C82325351F01E3D300F930DE /* FiveAlertView.m */,
+				C823253A1F01E3D300F930DE /* LDHUDView.h */,
+				C823253B1F01E3D300F930DE /* LDHUDView.m */,
+				C82325381F01E3D300F930DE /* LDHUDTool.h */,
+				C82325391F01E3D300F930DE /* LDHUDTool.m */,
+				C823253C1F01E3D300F930DE /* LDTool.h */,
+				C823253D1F01E3D300F930DE /* LDTool.m */,
 				C8DD986F1EF909C30023ABC0 /* Resource */,
-				C8DD98631EF8C1820023ABC0 /* OneAlertView.h */,
-				C8DD98641EF8C1820023ABC0 /* OneAlertView.m */,
-				C8DD986C1EF902F60023ABC0 /* TwoAlertView.h */,
-				C8DD986D1EF902F60023ABC0 /* TwoAlertView.m */,
-				C872DC971EFA0816005BD985 /* ThreeAlertView.h */,
-				C872DC981EFA0816005BD985 /* ThreeAlertView.m */,
-				C872DCA91EFA1E26005BD985 /* FourAlertView.h */,
-				C872DCAA1EFA1E26005BD985 /* FourAlertView.m */,
-				C8DD98691EF8D2860023ABC0 /* LDHUDView.h */,
-				C8DD986A1EF8D2860023ABC0 /* LDHUDView.m */,
-				C8DD98661EF8D24C0023ABC0 /* LDHUDTool.h */,
-				C8DD98671EF8D24C0023ABC0 /* LDHUDTool.m */,
-				C872DC941EFA00A1005BD985 /* LDTool.h */,
-				C872DC951EFA00A1005BD985 /* LDTool.m */,
 			);
 			path = LDHUD;
 			sourceTree = "<group>";
@@ -394,22 +404,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82325441F01E3D300F930DE /* FiveAlertView.m in Sources */,
+				C82325451F01E3D300F930DE /* FourAlertView.m in Sources */,
 				C872DCCA1EFA4BBE005BD985 /* ViewController.m in Sources */,
-				C872DC961EFA00A1005BD985 /* LDTool.m in Sources */,
 				C872DCC31EFA4BBE005BD985 /* FiveController.m in Sources */,
-				C872DC991EFA0816005BD985 /* ThreeAlertView.m in Sources */,
+				C823254E1F01E40600F930DE /* EightController.m in Sources */,
+				C82325471F01E3D300F930DE /* LDHUDView.m in Sources */,
 				C872DCC61EFA4BBE005BD985 /* SevenController.m in Sources */,
+				C823254A1F01E3D300F930DE /* ThreeAlertView.m in Sources */,
+				C82325461F01E3D300F930DE /* LDHUDTool.m in Sources */,
+				C823254B1F01E3D300F930DE /* TwoAlertView.m in Sources */,
 				C872DCC71EFA4BBE005BD985 /* SixController.m in Sources */,
 				C872DCC41EFA4BBE005BD985 /* FourController.m in Sources */,
 				C8DD98341EF8BFDF0023ABC0 /* AppDelegate.m in Sources */,
-				C872DCAB1EFA1E26005BD985 /* FourAlertView.m in Sources */,
 				C872DCC91EFA4BBE005BD985 /* TwoController.m in Sources */,
-				C8DD986B1EF8D2860023ABC0 /* LDHUDView.m in Sources */,
-				C8DD986E1EF902F60023ABC0 /* TwoAlertView.m in Sources */,
+				C82325481F01E3D300F930DE /* LDTool.m in Sources */,
 				C872DCC81EFA4BBE005BD985 /* ThreeController.m in Sources */,
 				C872DCC51EFA4BBE005BD985 /* OneController.m in Sources */,
-				C8DD98651EF8C1820023ABC0 /* OneAlertView.m in Sources */,
-				C8DD98681EF8D24C0023ABC0 /* LDHUDTool.m in Sources */,
+				C82325491F01E3D300F930DE /* OneAlertView.m in Sources */,
 				C8DD98311EF8BFDF0023ABC0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
